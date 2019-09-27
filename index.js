@@ -12,9 +12,15 @@
 
 
 findBrokenKeys = (str1, str2) => {
+  let arr = [];
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] !== str2[i]) {
+      if ( arr.includes(str1[i]) === false ) arr.push(str1[i]);
+    }
+  }
+  if (arr.length === 0) return -1;
+  else return arr; 
   // write your code HERE
-
-
 
 };
 
